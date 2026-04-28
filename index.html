@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio pessoal de Hugo Dias - Desenvolvedor Full Stack">
+  <title>Hugo Dias | Portfólio</title>
+  <!-- Google Fonts: Inter para tipografia moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVEGAÇÃO FIXA NO TOPO ========== -->
+  <!-- Menu principal com links âncora para cada seção e menu hambúrguer no mobile -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Hugo<span class="logo-dot">.</span>Dias<span
+          class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link active" data-section="inicio">Início</a></li>
+        <li><a href="#sobre" class="nav-link" data-section="sobre">Sobre</a></li>
+        <li><a href="#habilidades" class="nav-link" data-section="habilidades">Habilidades</a></li>
+        <li><a href="#projetos" class="nav-link" data-section="projetos">Projetos</a></li>
+        <li><a href="#contato" class="nav-link" data-section="contato">Contato</a></li>
+      </ul>
+      <!-- Botão hambúrguer para dispositivos mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== SEÇÃO INÍCIO (HERO) ========== -->
+  <!-- Apresentação inicial com nome, título animado (typewriter), botões de ação e redes sociais -->
+  <section id="inicio" class="hero-section">
+    <!-- Canvas para efeito de partículas animadas no fundo -->
+    <canvas id="particlesCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting animate-on-scroll">Olá, eu sou</p>
+      <h1 class="hero-name animate-on-scroll">Hugo Dias</h1>
+      <div class="hero-title-wrapper animate-on-scroll">
+        <span class="hero-title-prefix">Eu sou </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-description animate-on-scroll">Transformando ideias em experiências digitais excepcionais com
+        código limpo e design moderno.</p>
+      <div class="hero-buttons animate-on-scroll">
+        <a href="#projetos" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Ver Projetos
+        </a>
+        <a href="#" class="btn btn-outline" id="downloadCV">
+          <i class="fas fa-download"></i> Baixar CV
+        </a>
+      </div>
+      <div class="hero-socials animate-on-scroll">
+        <a href="https://github.com/hugodiass" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hugo-dias-047009288/" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/hugodiass1/" target="_blank" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <!-- Indicador de scroll para baixo -->
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO SOBRE ========== -->
+  <!-- Informações pessoais, foto de perfil e dados rápidos de contato -->
+  <section id="sobre" class="section sobre-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">01.</span> Sobre Mim
+      </h2>
+      <div class="sobre-grid">
+        <div class="sobre-image animate-on-scroll">
+          <div class="image-wrapper">
+            <div class="gradient-border"></div>
+            <!-- Coloque sua foto na pasta do projeto e atualize o src abaixo -->
+            <img src="fotoperfil.png" alt="Foto de Hugo Dias" class="profile-photo">
+          </div>
+        </div>
+        <div class="sobre-text animate-on-scroll">
+          <p>Sou desenvolvedor Full Stack focado em transformar ideias em soluções digitais reais. Minha jornada na
+            tecnologia começou com a curiosidade de entender como as coisas funcionam na web e, desde então, venho
+            unindo habilidades técnicas a um olhar apurado para design, entregando produtos que funcionam perfeitamente
+            e proporcionam experiências visuais memoráveis.</p>
+          <p>No frontend trabalho com React, Next.js e TypeScript, utilizando TailwindCSS e CSS para interfaces
+            responsivas e bem estruturadas. No backend tenho experiência com Node.js, PHP, Python e C#, integração de
+            APIs REST e bancos de dados como PostgreSQL e MySQL. Meu fluxo de desenvolvimento inclui testes com Jest e
+            Cypress, containerização com Docker, pipelines de CI/CD e versionamento com Git e GitHub.</p>
+          <p>Acredito que um bom projeto precisa ser rápido, intuitivo e escalável. Por isso, priorizo código limpo e
+            boas práticas, pensando sempre na evolução futura de cada aplicação e na qualidade da experiência entregue
+            ao usuário.</p>
+          <div class="sobre-info">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Nova Friburgo - RJ, Brasil</span></div>
+            <div class="info-item"><i class="fas fa-check-circle"></i><span>Disponível para freelas</span></div>
+            <div class="info-item"><i class="fas fa-envelope"></i><a
+                href="mailto:hugodispdb@gmail.com">hugodispdb@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO HABILIDADES ========== -->
+  <!-- Cards de tecnologias organizados por categoria com barras de progresso animadas -->
+  <section id="habilidades" class="section habilidades-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">02.</span> Habilidades
+      </h2>
+
+      <!-- Categoria: Front-end -->
+      <div class="skills-category animate-on-scroll">
+        <h3 class="category-title"><i class="fas fa-palette"></i> Front-end</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h4>HTML5</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h4>CSS3</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-js-square"></i>
+            <h4>JavaScript</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-react"></i>
+            <h4>React</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-file-code"></i>
+            <h4>TypeScript</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-layer-group"></i>
+            <h4>Next.js</h4>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria: Back-end -->
+      <div class="skills-category animate-on-scroll">
+        <h3 class="category-title"><i class="fas fa-server"></i> Back-end</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fab fa-node-js"></i>
+            <h4>Node.js</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <h4>Python</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-php"></i>
+            <h4>PHP</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <h4>PostgreSQL</h4>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria: Ferramentas -->
+      <div class="skills-category animate-on-scroll">
+        <h3 class="category-title"><i class="fas fa-tools"></i> Ferramentas</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fab fa-git-alt"></i>
+            <h4>Git</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-docker"></i>
+            <h4>Docker</h4>
+
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-figma"></i>
+            <h4>Figma</h4>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO PROJETOS ========== -->
+  <!-- Grade de cards de projetos com filtro por categoria -->
+  <section id="projetos" class="section projetos-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">03.</span> Projetos
+      </h2>
+      <div class="projects-grid">
+
+        <!-- ===== Projeto 1 ===== -->
+        <!-- Cada projeto tem um carrossel de imagens com navegação por setas e indicadores -->
+        <!-- Para adicionar suas imagens: substitua os src das <img> dentro de .carousel-track -->
+        <div class="project-card animate-on-scroll" data-category="web">
+          <div class="project-carousel">
+            <div class="carousel-track">
+              <!-- Coloque suas imagens do projeto aqui (quantas quiser) -->
+              <img src="projetos/profit6.png" alt="ProFit Personal - Tela 6" class="carousel-slide">
+              <img src="projetos/profit1.png" alt="ProFit Personal - Tela 1" class="carousel-slide">
+              <img src="projetos/profit2.png" alt="ProFit Personal - Tela 2" class="carousel-slide">
+              <img src="projetos/profit3.png" alt="ProFit Personal - Tela 3" class="carousel-slide">
+              <img src="projetos/profit4.png" alt="ProFit Personal - Tela 4" class="carousel-slide">
+              <img src="projetos/profit5.png" alt="ProFit Personal - Tela 5" class="carousel-slide">
+
+            </div>
+            <!-- Setas de navegação do carrossel -->
+            <button class="carousel-btn carousel-prev" aria-label="Anterior"><i
+                class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn carousel-next" aria-label="Próximo"><i
+                class="fas fa-chevron-right"></i></button>
+            <!-- Indicadores (dots) gerados automaticamente pelo JS -->
+            <div class="carousel-dots"></div>
+            <!-- Botão para abrir imagem no lightbox -->
+            <button class="carousel-expand" aria-label="Ampliar imagem"><i class="fas fa-expand"></i></button>
+          </div>
+          <div class="project-info">
+            <h3>ProFit Personal</h3>
+            <p>plataforma de acompanhamento de treinos, com foco em resultados personalizados.</p>
+            <div class="project-tags">
+              <span>React</span><span>JavaScript</span><span>TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Projeto 2 ===== -->
+        <div class="project-card animate-on-scroll" data-category="web">
+          <div class="project-carousel">
+            <div class="carousel-track">
+              <img src="projetos/belloscar1.png" alt="Belloscar - Tela 1" class="carousel-slide">
+              <img src="projetos/belloscar2.png" alt="Belloscar - Tela 2" class="carousel-slide">
+              <img src="projetos/belloscar3.png" alt="Belloscar - Tela 3" class="carousel-slide">
+              <img src="projetos/belloscar4.png" alt="Belloscar - Tela 4" class="carousel-slide">
+              <img src="projetos/belloscar5.png" alt="Belloscar - Tela 5" class="carousel-slide">
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Anterior"><i
+                class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn carousel-next" aria-label="Próximo"><i
+                class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+            <button class="carousel-expand" aria-label="Ampliar imagem"><i class="fas fa-expand"></i></button>
+          </div>
+          <div class="project-info">
+            <h3>Belloscar</h3>
+            <p>site para vendas de carros.</p>
+            <div class="project-tags">
+              <span>JavaScript</span><span>PHP</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Projeto 3 ===== -->
+        <div class="project-card animate-on-scroll" data-category="uiux">
+          <div class="project-carousel">
+            <div class="carousel-track">
+              <img src="projetos/novaerp1.png" alt="Nova Erp - Tela 1" class="carousel-slide">
+              <img src="projetos/novaerp2.png" alt="Nova Erp - Tela 2" class="carousel-slide">
+              <img src="projetos/novaerp3.png" alt="Nova Erp - Tela 3" class="carousel-slide">
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Anterior"><i
+                class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn carousel-next" aria-label="Próximo"><i
+                class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+            <button class="carousel-expand" aria-label="Ampliar imagem"><i class="fas fa-expand"></i></button>
+          </div>
+          <div class="project-info">
+            <h3>Nova Erp</h3>
+            <p>Sistema de gestão empresarial (Em criação).</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO CONTATO ========== -->
+  <!-- Formulário de contato com validação JS e links alternativos -->
+  <section id="contato" class="section contato-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">04.</span> Contato
+      </h2>
+      <p class="section-subtitle animate-on-scroll">Tem um projeto em mente? Vamos conversar!</p>
+      <div class="contato-grid">
+        <form id="contactForm" class="contact-form animate-on-scroll" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <span class="error-msg" id="nomeError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto *</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+            <span class="error-msg" id="assuntoError"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+            <span class="error-msg" id="mensagemError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+          </button>
+          <!-- Feedback de envio (sucesso/erro) -->
+          <div id="formFeedback" class="form-feedback"></div>
+        </form>
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h4>E-mail</h4>
+            <a href="mailto:hugodispdb@gmail.com">hugodispdb@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/5522997854247" target="_blank">(22) 99785-4247</a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Localização</h4>
+            <p>Nova Friburgo, RJ - Brasil</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://github.com/hugodiass" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hugo-dias-047009288/" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/hugodiass1/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>Feito por Hugo Dias &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo — aparece após rolar 300px -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ========== LIGHTBOX / MODAL ========== -->
+  <!-- Modal de tela cheia para visualizar imagens dos projetos em tamanho grande -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Imagem ampliada do projeto">
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
