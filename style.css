@@ -843,130 +843,62 @@ ul { list-style: none; }
 }
 
 /* =============================================
-   SEÇÃO CONTATO — Formulário e cards de contato
+   SEÇÃO CONTATO — Cards de contato clicáveis
    ============================================= */
-.contato-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.contact-form {
+.contact-cards-grid {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid rgba(255, 255, 255, 0.08);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  font-family: var(--font-main);
-  font-size: 0.95rem;
-  transition: border-color var(--transition);
-  outline: none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--accent-1);
-}
-
-/* Borda vermelha para campos inválidos */
-.form-group input.invalid,
-.form-group textarea.invalid {
-  border-color: #f5576c;
-}
-
-.error-msg {
-  color: #f5576c;
-  font-size: 0.8rem;
-  margin-top: 4px;
-  display: block;
-  min-height: 1em;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Feedback de sucesso/erro após enviar o formulário */
-.form-feedback {
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  text-align: center;
-  font-weight: 500;
-  display: none;
-}
-
-.form-feedback.success {
-  display: block;
-  background: rgba(0, 255, 136, 0.1);
-  color: var(--accent-3);
-  border: 1px solid rgba(0, 255, 136, 0.2);
-}
-
-.form-feedback.error {
-  display: block;
-  background: rgba(245, 87, 108, 0.1);
-  color: #f5576c;
-  border: 1px solid rgba(245, 87, 108, 0.2);
-}
-
-/* Cards de informação de contato alternativo */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .contact-card {
   background: var(--bg-card);
-  padding: 24px;
+  padding: 32px 24px;
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all var(--transition);
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 200px;
+  max-width: 250px;
+  min-width: 180px;
+  cursor: pointer;
 }
 
 .contact-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(0, 212, 255, 0.15);
+  transform: translateY(-6px);
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .contact-card i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  display: block;
 }
 
 .contact-card h4 {
-  margin-bottom: 6px;
-  font-size: 1rem;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: var(--text-primary);
 }
 
-.contact-card a,
 .contact-card p {
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
-.contact-card a:hover {
+.contact-card:hover p {
   color: var(--accent-1);
 }
 
@@ -1092,8 +1024,13 @@ ul { list-style: none; }
     justify-content: center;
   }
 
-  .contato-grid {
-    grid-template-columns: 1fr;
+  .contact-cards-grid {
+    gap: 16px;
+  }
+
+  .contact-card {
+    flex: 1 1 140px;
+    min-width: 140px;
   }
 
   .projects-grid {

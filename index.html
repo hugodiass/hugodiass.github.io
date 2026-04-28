@@ -313,58 +313,34 @@
   </section>
 
   <!-- ========== SEÇÃO CONTATO ========== -->
-  <!-- Formulário de contato com validação JS e links alternativos -->
+  <!-- Cards de contato clicáveis -->
   <section id="contato" class="section contato-section">
     <div class="container">
       <h2 class="section-title animate-on-scroll">
         <span class="title-number">04.</span> Contato
       </h2>
       <p class="section-subtitle animate-on-scroll">Tem um projeto em mente? Vamos conversar!</p>
-      <div class="contato-grid">
-        <form id="contactForm" class="contact-form animate-on-scroll" novalidate>
-          <div class="form-group">
-            <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-            <span class="error-msg" id="nomeError"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-            <span class="error-msg" id="emailError"></span>
-          </div>
-          <div class="form-group">
-            <label for="assunto">Assunto *</label>
-            <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
-            <span class="error-msg" id="assuntoError"></span>
-          </div>
-          <div class="form-group">
-            <label for="mensagem">Mensagem *</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
-            <span class="error-msg" id="mensagemError"></span>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            <i class="fas fa-paper-plane"></i> Enviar Mensagem
-          </button>
-          <!-- Feedback de envio (sucesso/erro) -->
-          <div id="formFeedback" class="form-feedback"></div>
-        </form>
-        <div class="contact-info animate-on-scroll">
-          <div class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <h4>E-mail</h4>
-            <a href="mailto:hugodispdb@gmail.com">hugodispdb@gmail.com</a>
-          </div>
-          <div class="contact-card">
-            <i class="fab fa-whatsapp"></i>
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/5522997854247" target="_blank">(22) 99785-4247</a>
-          </div>
-          <div class="contact-card">
-            <i class="fas fa-map-marker-alt"></i>
-            <h4>Localização</h4>
-            <p>Nova Friburgo, RJ - Brasil</p>
-          </div>
-        </div>
+      <div class="contact-cards-grid animate-on-scroll">
+        <a href="mailto:hugodispdb@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <h4>E-mail</h4>
+          <p>hugodispdb@gmail.com</p>
+        </a>
+        <a href="https://wa.me/5522997854247" target="_blank" class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <h4>WhatsApp</h4>
+          <p>(22) 99785-4247</p>
+        </a>
+        <a href="https://www.instagram.com/hugodiass1/" target="_blank" class="contact-card">
+          <i class="fab fa-instagram"></i>
+          <h4>Instagram</h4>
+          <p>@hugodiass1</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hugo-dias-047009288/" target="_blank" class="contact-card">
+          <i class="fab fa-linkedin-in"></i>
+          <h4>LinkedIn</h4>
+          <p>Hugo Dias</p>
+        </a>
       </div>
     </div>
   </section>
